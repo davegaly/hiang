@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">{{ modalTitle }}</h4>
+</div>
+<div class="modal-body" [innerHTML]="message">
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="onCancel()"> {{ cancelText }} <fa-icon *ngIf="cancelIcon" [icon]="cancelIcon"></fa-icon></button>
+    <button type="button" class="btn" [ngClass]="okButtonClass" (click)="onOk()"> {{ okText }} <fa-icon *ngIf="okIcon" [icon]="okIcon"></fa-icon></button>
+</div>
+
