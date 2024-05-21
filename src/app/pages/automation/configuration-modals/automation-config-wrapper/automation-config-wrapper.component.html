@@ -1,0 +1,73 @@
+<div class="modal-header">
+    <h4 class="modal-title">Configura Automazione</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onDismiss()"></button>
+</div>
+<div class="modal-body" style="overflow:hidden;" id="myModal">
+
+    <!-- tabs -->
+    <ul class="nav-step nav-step-linkbuttons">
+        <a (click)="switchPanels('configure')">
+            <li class="withradius nav-step-li" [class.nav-step-li-active]=" currentSelectedTab === 'configure'" id="modalEditAutomationContentConfigureLink">
+                <div class="nav-step-icon-container withradius"><fa-icon [icon]="['fas', 'cogs']"></fa-icon></div>
+                <div class="tab-text">Configurazione<br />e Parametri</div>
+            </li>
+        </a>
+        <!--
+        <a (click)="switchPanels('schedule')">
+            <li class="withradius nav-step-li" [class.nav-step-li-active]="currentSelectedTab === 'schedule'" id="modalEditAutomationContentScheduleLink">
+                <div class="nav-step-icon-container withradius"><fa-icon [icon]="['fas', 'bolt']"></fa-icon></div>
+                <div class="tab-text">Attivazione e<br />Pianificazione</div>
+            </li>
+        </a>
+        -->
+        <a (click)="switchPanels('log')">
+            <li class="withradius nav-step-li" [class.nav-step-li-active]="currentSelectedTab === 'log'" id="modalEditAutomationContentLogLink">
+                <div class="nav-step-icon-container withradius"><fa-icon [icon]="['fas', 'list-alt']"></fa-icon></div>
+                <div class="tab-text">Registro<br />Attività</div>
+            </li>
+        </a>
+    </ul>
+    <!-- tabs -->
+
+    <!-- panels -->
+    <div *ngIf="currentSelectedTab === 'configure'" id="modalEditAutomationContentConfigure" class="modalEditAutomationContent withradius">
+        <!-- contenuto ripreso dalla tipologia di modale passata come tipo -->
+        <ng-content></ng-content>
+        <!-- contenuto ripreso dalla tipologia di modale passata come tipo -->
+    </div>
+    <div *ngIf="currentSelectedTab === 'schedule'" id="modalEditAutomationContentSchedule" class="modalEditAutomationContent withradius">
+        Schedule
+    </div>
+    <div *ngIf="currentSelectedTab === 'log'" id="modalEditAutomationContentLog" class="modalEditAutomationContent withradius">
+        <!-- tabella elementi di log -->
+        <div >
+            <div style="margin-top: 25px; margin-bottom: 15px;">Questo è l'elenco delle esecuzioni per questa attività automatica. Clicca su un elemento della lista per visualizzarne il registro eventi.</div>
+            <table *ngIf="this.listLogEntries != null" class="datagrid slim" style="margin-bottom:40px;">
+                <tbody>
+                    <tr class="datagrid_header">
+                        <td>Data Inizio</td>
+                        <td>Data Fine</td>
+                        <td>Esito</td>
+                        <td style="text-align:center"></td>
+                    </tr>
+                    <tr *ngFor="let logEntry of this.listLogEntries">
+                        <td>{{ this.formatDate(logEntry.startDate) }}</td>
+                        <td>{{ this.formatDate(logEntry.endDate)}}</td>
+                        <td><span class='{{ renderLogStatusBadgeClass(logEntry.status) }}'>{{logEntry.status}}</span></td>
+                        <td style="text-align:center; padding-right:0px;"><button class="btn btn-action btn-small-icon-only" (click)="onLogEntryClick(logEntry.logId)"><fa-icon [icon]="['fas', 'download']"></fa-icon></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- tabella elementi di log -->
+    </div>
+    <!-- panels -->
+
+</div>
+<div class="modal-footer" #modalFooter *ngIf="this.showModalFooter">
+    <button type="button" class="btn btn-generic " (click)="onDismiss()" ><fa-icon [icon]="['fas', 'arrow-left']"></fa-icon></button>
+    <button type="button" class="btn btn-generic" (click)="onRemoveAutomation()" ><fa-icon [icon]="['fas', 'trash']" ></fa-icon></button>
+    <button type="button" class="btn btn-action btn-withicon" (click)="onSave()" >Salva Configurazione<fa-icon [icon]="['fas', 'save']" ></fa-icon></button>
+</div>
+
