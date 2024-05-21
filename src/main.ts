@@ -1,8 +1,4 @@
 /// <reference types="@angular/localize" />
-
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-
 import { importProvidersFrom } from '@angular/core';
 import { AppComponent } from './app/app.component';
 import { CommonModule } from '@angular/common';
