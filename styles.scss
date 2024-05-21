@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    color: #777677;
+    font-family: 'Open Sans';
+    font-size: 13px;
+}
+
+.page-title{
+    font-size: 2.1rem;
+    color: #464e56;
+    font-weight: 700;
+    margin-bottom:30px;
+}
+
+
+
+/* form controls override */
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+}
+.form-control {
+    font-size:13px;
+}
+input.form-control {
+    padding-top: 10px;
+    padding-bottom: 9px;
+}
+.invalid-field {
+    width: 100%;
+    margin-top: 5px;
+    color: #dc3545;
+    margin-left: 3px !important;
+    font-weight: 700;
+}
+/* form controls override */
+
+
+/* generic buttons */
+.btn-action, .btn-action:hover, .btn-action:active, .btn:first-child:active .btn-action:focus {
+    background-color: #526171 !important;
+    border-color:#526171 !important;
+    color: #fff !important;
+}
+.btn-generic, .btn-generic:hover, .btn-generic:active, .btn-generic:focus, :not(.btn-check) + .btn:active {
+    background-color: #d1d1d1 !important;
+    border-color:#d1d1d1 !important;
+    color: #656565 !important;
+}
+.btn-withicon .ng-fa-icon {
+    float: right;
+    margin-left:8px;
+}
+
+.btn-text {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.btn-add-margin-right {
+    margin-right: calc(var(--bs-modal-footer-gap)* 0.5);
+}
+.btn-small-icon-only {
+    padding: 2px 8px;
+}
+/* generic buttons */
+
+
+/* select 2 */
+.select2-selection {
+    border:0px solid transparent !important;
+}
+.select2-selection__choice {
+    background-color:#f3f3f3 !important;
+    color:#676767 !important;
+    font-size: 11px;
+    border:1px solid #e5e5e5 !important;
+}
+select.form-control {
+    -webkit-transition: none;
+    transition: none;
+}
+.select2-selection__rendered{
+    padding:0px !important;
+}
+.select2-dropdown{
+    border:1px solid silver !important;
+}
+.select2-search__field:focus-visible {
+    outline: none !important;
+}
+/* select 2 */
+
+
+/* Datagrid */
+.datagrid {
+    width: 100%;
+    background-color: #fff;
+    border: 0px solid #fff;
+    border-collapse: collapse;
+  }
+  .datagrid:not(.zeromargin) {
+    margin: 5px 0 10px 0;
+  }
+  .datagrid td {
+    position: relative;
+    line-height: 33px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-overflow: ellipsis;
+  }
+  .datagrid td .link:hover {
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .datagrid:not(.slim) td {
+    height: 50px;
+  }
+  .datagrid tr {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .datagrid:not(.slim) .datagrid_header td {
+    background-color: #f2f2f2;
+    font-size: 0.9em;
+    color: #656565;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 43px;
+    padding: 3px;
+    padding-left: 10px;
+  }
+  .datagrid.slim .datagrid_header td {
+    background-color: #f2f2f2;
+    font-size: 0.9em;
+    color: #656565;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 33px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+  }
+  .datagrid_header_sortable th {
+    background-color: #586680;
+    font-size: 0.9em;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e6e6e6;
+    height: 43px;
+    padding: 3px;
+    text-align: center;
+  }
+  .datagrid_buttoncol {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  /* Datagrid */
