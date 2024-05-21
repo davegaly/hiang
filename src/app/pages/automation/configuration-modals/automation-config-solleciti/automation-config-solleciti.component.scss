@@ -21,23 +21,3 @@
     font-size: 15px;
     font-weight: 700;
   }
-
-  .arrow {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url('../../../../../assets/img/arrowbottomright.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    bottom: -14px;
-    left: calc(50% - -79px);
-  }
-
-.background-container-div{
-    position: relative;
-    background-position: center bottom;
-    background-image: url('../../../../../assets/img/emailOrangeDraw.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 495px;
-}

@@ -13,10 +13,9 @@ import { RouterOutlet } from '@angular/router';
     imports: [RouterOutlet],
 })
 export class AppComponent {
-    title = 'sintesi-frontend';
+    title = 'hiang';
 
     constructor(faIconLibrary: FaIconLibrary) {
-        //includo i pacchetti di icone fontawesome
         faIconLibrary.addIconPacks(fas);
         faIconLibrary.addIconPacks(far);
         faIconLibrary.addIconPacks(fab);
