@@ -1,1 +1,8 @@
 pagina delle polizze
+<br>
+<br>
+<div *ngIf="this.listPolizze != null">
+    <ng-container *ngFor="let polizzaItem of this.listPolizze">
+        {{ polizzaItem.numeroPolizza }}
+    </ng-container>
+</div>

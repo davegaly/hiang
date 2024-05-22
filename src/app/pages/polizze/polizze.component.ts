@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MockDataService, MockupDataPolizza } from 'src/app/services/mockdata.services';
 
 @Component({
     standalone: true,
@@ -12,5 +13,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class PolizzeComponent {
     constructor(
+        protected mockDataService: MockDataService
     ) {}
+
+    listPolizze: MockupDataPolizza[] | null = null;
+
+    async ngOnInit(): Promise<void> {
+        console.log("inited");
+        this.listPolizze = this.mockDataService.getPolizze();
+    }
+
 }

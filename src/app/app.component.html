@@ -1,9 +1,47 @@
-<div>
-    <nav>
-        <ul>
-          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-          <li><a routerLink="/polizze" routerLinkActive="active">Polizze</a></li>
-        </ul>
-      </nav>      
+<!-- site wrapper -->
+<div class="container-fluid d-flex h-100" id="site-wrapper">
+
+  <!-- Sidebar -->
+  <div class="flex-shrink-0 bg-primary" id="sidebar-wrapper">
+    
+    <!-- logo -->
+    <div class="sidebar-heading"><img src="logo.png"></div>
+    <!-- logo -->
+
+    <!-- user -->
+    <div style="margin-bottom:40px;">
+      <img src="user.jpg" style="border-radius: 50%; width: 64px; height: 64px; border: 4px solid #afb8ec; margin: 10px;float:left;">
+      <div style="float:left;margin-top: 19px;font-size: 90%;">Benvenuto/a,</div>
+      <div style="float:left;margin-top: -2px;font-size: 110%;font-weight: 600;">Davide Galimberti</div>
+    </div>        
+    <!-- user -->
+
+    <!-- menu -->
+    <div>
+      <nav>
+          <ul>
+            <li><a routerLink="/home" routerLinkActive="active">Homeaaa</a></li>
+            <li><a routerLink="/polizze" routerLinkActive="active">Polizze</a></li>
+          </ul>
+        </nav>      
+    </div>
+    <!-- menu -->
+
+  </div>
+  <!-- Sidebar -->
+
+  <!-- Page Content -->
+  <div class="flex-grow-1 bg-light" id="page-content-wrapper">
+      <router-outlet></router-outlet>
+  </div>
+  <!-- Page Content -->
+
+  <!-- Right pane -->
+  <div class="bg-success">Colonna Destra</div>
+  <!-- Right pane -->
+
 </div>
-<router-outlet></router-outlet>
+<!-- site wrapper -->
+
+
+

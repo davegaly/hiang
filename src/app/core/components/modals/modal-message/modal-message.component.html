@@ -1,8 +1,0 @@
-<div class="modal-header">
-    <h4 class="modal-title" id="modal-title">{{ modalTitle }}</h4>
-</div>
-<div class="modal-body" [innerHTML]="message">
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn" [ngClass]="okButtonClass" (click)="onOk()"> {{ okText }} <fa-icon *ngIf="okIcon" [icon]="okIcon"></fa-icon></button>
-</div>
