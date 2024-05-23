@@ -2,21 +2,83 @@
 @import 'bootstrap/scss/bootstrap';
 
 body {
-    padding: 20px 20px;
-    background-color: #bcd2f3;
-}
+    padding: 30px 30px 30px 30px;
+    background-color: #d3d3d3;
+}  
 
 #site-wrapper {
-    border-radius: 20px;
-    background-color:#f1f2f7;
-    padding-top: 20px;
-    padding-bottom:20px;
 }
 
 #sidebar-wrapper{
     padding: 20px 20px;
+    background-color:#fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#sidebar-logo {
+    width:300px;
+    display:block;
+    display:flex;
+    justify-content: center;
+}
+#sidebar-logo img {
+    width:200px;
+}
+
+#sidebar-menu {
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+}
+#sidebar-menu ul {
+    width: 200px;
+}
+#sidebar-menu li {
+    margin-bottom: 24px;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+#sidebar-menu li:has(a.active){
+    background-color:#e5e5e5;
+}
+#sidebar-menu li a {
+    color:#7a7a7a;
+}
+#sidebar-menu li a.active {
+    color:black;
+}
+#sidebar-menu li a .ng-fa-icon {
+    margin-right:10px;
 }
 
 #page-content-wrapper{
-
+    background-color:#f6f6f6;
 }
+
+#infobar-wrapper{
+    background-color:#f6f6f6;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 400px;
+    border-left:1px solid silver;
+}
+
+
+
+/* resets */
+a 
+{
+    text-decoration: none;
+}
+    a:hover {
+        color: inherit;
+    }
+ul {
+    list-style-type: none;
+    padding-left: 0; /* Remove default padding */
+}
+li {
+    padding-left: 0; /* Optional: Remove padding from list items */
+} 
+/* resets */

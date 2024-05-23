@@ -15,6 +15,9 @@ const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: 'home', component: HomepageComponent },
     { path: 'polizze', component: PolizzeComponent },
+    { path: 'documenti', component: PolizzeComponent },
+    { path: 'preventivi', component: PolizzeComponent },
+    { path: 'sinsitri', component: PolizzeComponent }
 ];
 
 bootstrapApplication(AppComponent, {

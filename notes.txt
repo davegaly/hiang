@@ -8,5 +8,5 @@ minimalist
 https://dribbble.com/halolab
 https://dribbble.com/shots/23474771-Worklio-Dashboard
 https://dribbble.com/shots/24190386-Twisty-Dashboard
-https://dribbble.com/shots/23968842-Vestox-Dashboard
+https://dribbble.com/shots/23968842-Vestox-Dashboard  <--
 https://dribbble.com/shots/23653591-Bonita-Dashboard

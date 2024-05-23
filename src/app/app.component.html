@@ -2,26 +2,21 @@
 <div class="container-fluid d-flex h-100" id="site-wrapper">
 
   <!-- Sidebar -->
-  <div class="flex-shrink-0 bg-primary" id="sidebar-wrapper">
+  <div class="flex-shrink-0" id="sidebar-wrapper">
     
     <!-- logo -->
-    <div class="sidebar-heading"><img src="logo.png"></div>
+    <div id="sidebar-logo"><img src="./../assets/img/logo.png"></div>
     <!-- logo -->
-
-    <!-- user -->
-    <div style="margin-bottom:40px;">
-      <img src="user.jpg" style="border-radius: 50%; width: 64px; height: 64px; border: 4px solid #afb8ec; margin: 10px;float:left;">
-      <div style="float:left;margin-top: 19px;font-size: 90%;">Benvenuto/a,</div>
-      <div style="float:left;margin-top: -2px;font-size: 110%;font-weight: 600;">Davide Galimberti</div>
-    </div>        
-    <!-- user -->
 
     <!-- menu -->
     <div>
-      <nav>
+      <nav id="sidebar-menu">
           <ul>
-            <li><a routerLink="/home" routerLinkActive="active">Homeaaa</a></li>
-            <li><a routerLink="/polizze" routerLinkActive="active">Polizze</a></li>
+            <li><a routerLink="/home" routerLinkActive="active"><fa-icon [icon]="['fas', 'home']"></fa-icon>Homeaaa</a></li>
+            <li><a routerLink="/polizze" routerLinkActive="active"><fa-icon [icon]="['fas', 'file-contract']"></fa-icon>Polizze</a></li>
+            <li><a routerLink="/polizze1" routerLinkActive="active"><fa-icon [icon]="['fas', 'upload']"></fa-icon>Documenti</a></li>
+            <li><a routerLink="/polizze2" routerLinkActive="active"><fa-icon [icon]="['fas', 'calculator']"></fa-icon>Preventivi</a></li>
+            <li><a routerLink="/polizze3" routerLinkActive="active"><fa-icon [icon]="['fas', 'car']"></fa-icon>Sinistri</a></li>
           </ul>
         </nav>      
     </div>
@@ -31,13 +26,15 @@
   <!-- Sidebar -->
 
   <!-- Page Content -->
-  <div class="flex-grow-1 bg-light" id="page-content-wrapper">
+  <div class="flex-grow-1" id="page-content-wrapper">
       <router-outlet></router-outlet>
   </div>
   <!-- Page Content -->
 
   <!-- Right pane -->
-  <div class="bg-success">Colonna Destra</div>
+  <div id="infobar-wrapper">
+      
+  </div>
   <!-- Right pane -->
 
 </div>
