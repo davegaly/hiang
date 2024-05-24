@@ -1,9 +1,13 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+html {
+    height: 100%;
+}
 body {
     padding: 30px 30px 30px 30px;
     background-color: #d3d3d3;
+    height: 100%;
 }  
 
 #site-wrapper {
@@ -57,12 +61,62 @@ body {
 }
 
 #infobar-wrapper{
-    background-color:#f6f6f6;
+    background-color: #f6f6f6;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 400px;
-    border-left:1px solid silver;
+    border-left: 1px solid silver;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
+#infobar-ragione-sociale{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+#infobar-sede {
+    margin-bottom:10px;
+}
+#infobar-orari {
+    margin-top:30px;
+    font-size: 0.8rem;
+}
+.infobar-orari-day{
+    font-weight: 700;
+    width: 40px;
+    display: block;
+    float: left;
+}
+#infobar-contatti {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#infobar-contatti .ng-fa-icon {
+    color:#9297d9;
+}
+#infobar-map {
+    margin-top:20px;
+}
+#infobar-map img {
+    width:300px;
+    height: 300px;
+}
+#infobar-icons{
+    margin-top:50px;
+}
+#infobar-icons img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+#infobar-icons img:hover {
+    cursor: pointer;
+}
+
 
 
 
