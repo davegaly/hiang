@@ -1,5 +1,27 @@
 .document-card-wrapper {
-    border:1px solid red;
-    border-radius:5px;
+    border: 1px solid #dad8ef;
+    border-radius: 5px;
     min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #0a58ca1a;
+    width:90%;
+}
+.document-card-title {
+    display: flex;
+    justify-content: flex-start;
+}
+.document-card-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.document-card-icon img {
+    width: 90px;
+    left: 33px;
+    position: relative;
+    height: 90px;
 }

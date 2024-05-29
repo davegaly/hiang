@@ -8,7 +8,12 @@
             <!-- {{ polizzaItem.numeroPolizza }} -->
             <div class="col-md-4">
                 <div class="document-card-wrapper">
-                    
+                    <div class="document-card-title">
+                        Polizza Auto
+                    </div>
+                    <div class="document-card-icon">
+                        <img [src]="'./../../../assets/img/' + this.returnRamoIcon(polizzaItem.ramo)">
+                    </div>
                 </div>
             </div>
         </ng-container>

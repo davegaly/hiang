@@ -23,4 +23,11 @@ export class PolizzeComponent {
         this.listPolizze = this.mockDataService.getPolizze();
     }
 
+    returnRamoIcon(ramo: string) {
+        if (ramo == 'auto') { return 'insurance-car.png'; }
+        if (ramo == 'health') { return 'insurance-health.png'; }
+        if (ramo == 'pets') { return 'insurance-pets.png'; }
+        return '';
+    }
+
 }
