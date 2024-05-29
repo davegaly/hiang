@@ -8,6 +8,7 @@ body {
     padding: 30px 30px 30px 30px;
     background-color: #d3d3d3;
     height: 100%;
+    font-family: "Montserrat", sans-serif;
 }  
 
 #site-wrapper {
@@ -58,6 +59,7 @@ body {
 
 #page-content-wrapper{
     background-color:#f6f6f6;
+    padding: 40px 20px 20px 20px;
 }
 
 #infobar-wrapper{
@@ -117,6 +119,12 @@ body {
     cursor: pointer;
 }
 
+
+/* page common elements */
+.page-title {
+    font-size:2.2rem;
+}
+/* page common elements */
 
 
 

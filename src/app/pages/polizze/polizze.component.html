@@ -1,8 +1,16 @@
-pagina delle polizze
-<br>
-<br>
+<div class="page-title">
+    Le tue Polizze
+</div>
+
 <div *ngIf="this.listPolizze != null">
-    <ng-container *ngFor="let polizzaItem of this.listPolizze">
-        {{ polizzaItem.numeroPolizza }}
-    </ng-container>
+    <div class="row">
+        <ng-container *ngFor="let polizzaItem of this.listPolizze">
+            <!-- {{ polizzaItem.numeroPolizza }} -->
+            <div class="col-md-4">
+                <div class="document-card-wrapper">
+                    
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>
